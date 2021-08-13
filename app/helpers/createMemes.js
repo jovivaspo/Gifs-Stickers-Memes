@@ -22,8 +22,8 @@ export function createMemes(props){
     let textos=parseInt(box_count)
     for(let i=1;i<=textos;i++){
         
-        template+=`<label for="text-${i}">Text ${i}
-        <input type="text" placeholder="Input text" id="text-${i}" autocomplete="off" required>`
+        template+=`
+        <input type="text" placeholder="Input text${i}" id="text-${i}" autocomplete="off" required>`
     }
 
     template+=`<button class="btn-create">Create</button>`

@@ -317,10 +317,12 @@ main{
         label {
             font-size: 17px;
             font-weight: bold;
+            font-family: $family_title;
+            color:rgb(255, 7, 201)
         }
 
         button {
-            margin-right: 40px;
+           
             background-color: rgb(255, 7, 201);
             color: black;
             font-weight: bold;
@@ -331,6 +333,9 @@ main{
         }
 
         .btn-create {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
             width: 5rem;
             height: 2rem;
             font-size: 17px;
@@ -340,6 +345,9 @@ main{
          .btn-refresh {
             width: 3rem;
             height: 2rem;
+            position: absolute;
+            bottom: 15px;
+            right: 100px;
 
             i {
                 font-size: 20px;
@@ -430,12 +438,13 @@ main{
 
 @media screen and(max-width:770px){
         header{
-            position: fixed;
+        position: fixed;
         display: block;
         height: 10vh;
         h1{
                 margin: 0 auto;
                 text-align: center;
+                line-height: 7vh;
             
             font-family: 2.7rem;
             height: 100%;
@@ -547,7 +556,7 @@ main{
 
 
      .window-create-meme{
-         height: 85vh;
+         height: 90vh;
          left: 5%;
          display: flex;
          flex-direction: column;
@@ -556,26 +565,49 @@ main{
 
          .card-meme{
              width: 95%;
-             height: 70%;
+             height: 55%;
+             margin-bottom: 10px;
+
+             h3{
+                 margin: 6px;
+             }
+
+             img{
+                 height: 90%;
+             }
+            
          }
         form{
 
-            height: 30%;
+            height: 40%;
             width: 95%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
 
             input{
-                width: 95%;
+                width: 75%;
+                margin-bottom: 5px;
+               
             }
 
-            button{
-                display: inline;
-                margin-top: 10px;
-                margin-bottom: 10px;
+            .btn-create{
+                font-size: 0.7rem;
+                width: 4rem;
+                height: 1.4rem;
+                bottom: 4px;
             }
+
+            .btn-refresh{
+                font-size: 0.7rem;
+                width: 3rem;
+                height: 1.4rem;
+                bottom: 4px;
+                right: 85px;
+            }
+            
+          
         }
     }
     }
@@ -584,10 +616,13 @@ main{
 @media screen and(max-width:350px){
 .window-create-meme{
     left: 2%;
+    
     form{
         input{
             margin: 0;
+            
         }
+
         button{
             width: 2rem;
             height: 1rem;

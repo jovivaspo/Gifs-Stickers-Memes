@@ -256,9 +256,10 @@ main {
 .window-create-meme form label {
   font-size: 17px;
   font-weight: bold;
+  font-family: "Do Hyeon", sans-serif;
+  color: #ff07c9;
 }
 .window-create-meme form button {
-  margin-right: 40px;
   background-color: #ff07c9;
   color: black;
   font-weight: bold;
@@ -268,6 +269,9 @@ main {
   font-family: "Do Hyeon", sans-serif;
 }
 .window-create-meme form .btn-create {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   width: 5rem;
   height: 2rem;
   font-size: 17px;
@@ -275,6 +279,9 @@ main {
 .window-create-meme form .btn-refresh {
   width: 3rem;
   height: 2rem;
+  position: absolute;
+  bottom: 15px;
+  right: 100px;
 }
 .window-create-meme form .btn-refresh i {
   font-size: 20px;
@@ -343,6 +350,7 @@ main {
   header h1 {
     margin: 0 auto;
     text-align: center;
+    line-height: 7vh;
     font-family: 2.7rem;
     height: 100%;
     width: 80%;
@@ -424,7 +432,7 @@ main {
   }
 
   .window-create-meme {
-    height: 85vh;
+    height: 90vh;
     left: 5%;
     display: flex;
     flex-direction: column;
@@ -433,23 +441,39 @@ main {
   }
   .window-create-meme .card-meme {
     width: 95%;
-    height: 70%;
+    height: 55%;
+    margin-bottom: 10px;
+  }
+  .window-create-meme .card-meme h3 {
+    margin: 6px;
+  }
+  .window-create-meme .card-meme img {
+    height: 90%;
   }
   .window-create-meme form {
-    height: 30%;
+    height: 40%;
     width: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
   .window-create-meme form input {
-    width: 95%;
+    width: 75%;
+    margin-bottom: 5px;
   }
-  .window-create-meme form button {
-    display: inline;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .window-create-meme form .btn-create {
+    font-size: 0.7rem;
+    width: 4rem;
+    height: 1.4rem;
+    bottom: 4px;
+  }
+  .window-create-meme form .btn-refresh {
+    font-size: 0.7rem;
+    width: 3rem;
+    height: 1.4rem;
+    bottom: 4px;
+    right: 85px;
   }
 }
 @media screen and (max-width: 350px) {
