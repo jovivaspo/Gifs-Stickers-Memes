@@ -1,0 +1,604 @@
+$text_color:rgb(247, 226, 38);
+$family_title: 'Do Hyeon', sans-serif;
+$family_font:'sans-serif';
+
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+    font-family: $family_font;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: solid 1px $text_color;
+    z-index: 100;
+    position: relative;
+
+    
+
+    h1{
+        color: $text_color;
+        width: 30%;
+        margin-left: 50px;
+        font-size: 3.5rem;
+        font-family: $family_title;
+        
+    }
+
+
+    .menu{
+        width: 50%;
+        display: flex;
+       
+        ul{ 
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        li{
+            list-style: none;
+            margin-right: 20px;
+            padding: 10px;
+        }
+
+        li a{
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: $family_title;
+            text-decoration: none;
+            transition: 0.5s ease;
+        }
+
+        li a:hover{
+            
+            opacity: 0.4;
+        }
+    }
+
+    .btn-menu{
+        background-color: $text_color;
+        color:black;
+        font-size: 2rem;
+
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        position: fixed;
+        right: 2%;
+        z-index: 999;
+        bottom: 5%;
+       
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    
+
+}
+
+#title{
+    color: rgb(0, 136, 255);
+    font-family: $family_title;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    
+}
+
+main{
+   max-width: 85%; 
+}
+
+.grid-collection{
+    max-width: 85%;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    justify-items: center;
+
+    .card-gif{
+        margin: 0 auto;
+        width: 280px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 15px;
+        
+
+        img{
+            display: block;
+            margin: 5px auto;
+            width: 260px;
+            height:260px;
+            object-fit: cover;
+        }
+
+        h3{
+            
+            color: $text_color;
+            font-size: 1rem;
+            font-family: $family_title;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    .card-meme {
+        width: 280px;
+        cursor: pointer;
+        margin: 20px;
+
+        h3 {
+            text-align: center;
+            color: rgb(255, 7, 201);
+            font-family: $family_title;
+
+        }
+
+        img {
+            width: 280px;
+            height: auto;
+        }
+
+    }
+
+}
+
+.loader{
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    margin: 4rem auto;
+}
+
+.hidden{
+    display: none;
+}
+
+.no-active{
+    transform: translateY(-100%);
+    transition: 0.8s ease;
+}
+
+.form-search{
+    width: 90vw;
+    height: 50px;
+    background-color:$text_color;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.8s ease;
+
+    position: relative;
+    
+    z-index: 0;
+    
+
+
+
+    #search{
+        width: 95%;
+        height: 80%;
+        border-radius: 1rem;
+        background-color: black;
+        opacity: 0.85;
+        border:none;
+        color: $text_color;
+        font-size: 1.8rem;
+        padding-left: 20px;
+
+       
+        
+    }
+
+    
+
+    #search::placeholder{
+        color: $text_color;
+        font-size: 1.8rem;
+        padding-left: 20px;
+    }
+
+    .btn-search{
+        height: 80%;
+        width: 3rem;
+        border:none;
+        background-color: black;
+        opacity: 0.85;
+        border-radius: 1rem;
+        
+        i{
+            color: $text_color;
+           
+        }
+    }
+
+    
+}
+
+.window-create-meme {
+    width: 80vw;
+    height: 80vh;
+    background-color: black;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    z-index: 999;
+    border: solid 1px rgb(255, 7, 201);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+    .card-meme {
+        display: flex;
+        flex-direction: column;
+
+        width: 50%;
+        height: 100%;
+        cursor: auto;
+
+        h3{
+            color: rgb(255, 7, 201);
+            font-family: $family_title;
+            text-align: center;
+        }
+
+        img {
+            height: 75%;
+            width: auto;
+        }
+
+    }
+
+    form {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            display: block;
+            margin-bottom: 20px;
+            border: none;
+            background-color: rgb(255, 7, 201);
+            color: black;
+            font-weight: bold;
+            font-family: $family_title;
+            padding: 5px;
+            outline: none;
+            width:85%
+        }
+
+        input::placeholder{
+            color: black;
+        }
+
+
+        label {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        button {
+            margin-right: 40px;
+            background-color: rgb(255, 7, 201);
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            font-family: $family_title;
+        }
+
+        .btn-create {
+            width: 5rem;
+            height: 2rem;
+            font-size: 17px;
+         
+         }
+
+         .btn-refresh {
+            width: 3rem;
+            height: 2rem;
+
+            i {
+                font-size: 20px;
+                  
+               }
+ 
+         }
+ 
+
+    }
+
+    .close {
+
+        width: 5%;
+        i {
+
+            color: rgb(255, 7, 201);
+
+            font-size: 25px;
+            position: absolute;
+            right: 1.5%;
+            top: 2%;
+            cursor: pointer;
+        }
+    }
+
+}
+
+/*Media queries*/
+
+@media screen and(max-width:1400px){
+    header{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       height: 15vh;
+       h1{
+           margin: 10px;
+           font-family: 2.7rem;
+           height: 60%;
+       }
+        .menu{
+            width: 100%;
+            height: 40%;
+
+            li{
+                height: 100%;
+                padding-bottom: 10px;
+            }
+            li a{
+                font-size: 0.9rem;    
+        }
+    }
+ }
+
+    .window-create-meme {
+        width: 88vw;
+        height: 60vh;
+        
+
+        .card-meme {
+        
+            width: 70%;
+            height: 100%;
+        
+
+
+        }
+
+        form {
+            width: 30%;
+            height: 100%;
+
+            input{
+                width: 85%;
+            }
+        
+
+        }
+
+    }
+
+
+}
+
+
+@media screen and(max-width:770px){
+        header{
+            position: fixed;
+        display: block;
+        height: 10vh;
+        h1{
+                margin: 0 auto;
+                text-align: center;
+            
+            font-family: 2.7rem;
+            height: 100%;
+            width: 80%;
+            padding-top: 10px;
+        }
+            .menu{
+                width: 100%;
+                height: 90vh;
+                position: fixed;
+                background-color: black;
+                transform: translateY(-200%);
+                transition: all 0.7s ease-out;
+                
+                
+            ul{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+            }
+
+                li{
+                    height: 100%;
+                    padding-bottom: 10px;
+                    border-top: solid 2px $text_color;
+                    width: 100%;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                li a{
+                    font-size: 1.2rem;    
+            }
+            }
+
+            .menu.active{
+                transform: translateY(0%);
+            }
+
+            .hidden{
+                display: none;
+            }
+
+            
+        }
+
+ .form-search {
+    top: 10vh;
+ }
+
+ #title{
+    margin-top:calc(10vh + 50px) ;
+    margin-bottom: 20px;
+ }
+ .window-create-meme {
+    width: 88vw;
+    height: 60vh;
+    
+
+    .card-meme {
+    
+        width: 60%;
+        height: 100%;
+    
+
+
+    }
+
+    form {
+        width: 40%;
+        height: 100%;
+
+       
+    
+
+    }
+
+
+}
+ 
+}
+
+@media screen and (max-width:540px){
+    .window-create-meme{
+        form{
+            button{
+                display: block;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:420px){
+    header h1{
+        font-size: 2.2rem;
+    }
+
+    .form-search {
+        height: 35px;
+       
+     }
+
+     #title{
+        margin-top:calc(10vh + 35px) ;
+        margin-bottom: 20px;
+     }
+
+
+     .window-create-meme{
+         height: 85vh;
+         left: 5%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+         .card-meme{
+             width: 95%;
+             height: 70%;
+         }
+        form{
+
+            height: 30%;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            input{
+                width: 95%;
+            }
+
+            button{
+                display: inline;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    }
+
+    
+@media screen and(max-width:350px){
+.window-create-meme{
+    left: 2%;
+    form{
+        input{
+            margin: 0;
+        }
+        button{
+            width: 2rem;
+            height: 1rem;
+            }
+        }
+    }
+}
+  
+       
+
+
+
+
+
